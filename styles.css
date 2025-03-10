@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #2C3E50;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.hero {
+    padding: 50px;
+    background: #1ABC9C;
+    color: white;
+}
+
+.service-container, .pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pricing-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+}
+
+#chatbox {
+    height: 100px;
+    overflow-y: auto;
+}
+
+#login-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}

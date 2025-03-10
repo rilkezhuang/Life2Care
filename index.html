@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life2Care - Your Digital Chronic Care Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Life2Care</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#appointment">Book Appointment</a></li>
+            <li><a href="#" id="login-btn">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Convenient, Affordable, and AI-Powered Chronic Care</h1>
+        <p>Book telemedicine consultations, track medication, and get pharmacy deliveries.</p>
+        <button onclick="document.getElementById('appointment').scrollIntoView();">Book an Appointment</button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <h3>Telemedicine Consultations</h3>
+                <p>Get expert advice from certified doctors anytime, anywhere.</p>
+            </div>
+            <div class="service">
+                <h3>Medication Tracking</h3>
+                <p>AI-powered reminders to help you stay on top of your prescriptions.</p>
+            </div>
+            <div class="service">
+                <h3>Pharmacy Integration</h3>
+                <p>Find partner pharmacies for medication pick-up or home delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <h2>Subscription Plans</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p>$9.99/month</p>
+                <p>Telemedicine consultations</p>
+                <p>Medication tracking</p>
+                <button>Subscribe</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium</h3>
+                <p>$19.99/month</p>
+                <p>Everything in Basic + Pharmacy deliveries</p>
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="appointment">
+        <h2>Book a Doctor Appointment</h2>
+        <form id="appointment-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="date" id="date" required>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot">
+        <div id="chatbox">
+            <p>👩‍⚕️ Life2Care Bot: How can I assist you today?</p>
+        </div>
+        <input type="text" id="userInput" placeholder="Type a message..." onkeypress="handleChat(event)">
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
